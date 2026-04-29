@@ -1,0 +1,27 @@
+﻿@model List<befit.Models.ExerciseStatsViewModel>
+
+<h2>Statystyki treningów (ostatnie 4 tygodnie)</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Ćwiczenie</th>
+            <th>Liczba wykonania</th>
+            <th>Łączne powtórzenia</th>
+            <th>Średnia waga</th>
+            <th>Maksymalna waga</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.Count</td>
+                <td>@item.TotalReps</td>
+                <td>@item.AvgWeight</td>
+                <td>@item.MaxWeight</td>
+            </tr>
+        }
+    </tbody>
+</table>
